@@ -139,7 +139,7 @@ const SatPrep = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button size="lg" className="text-lg px-8 h-14 shadow-sm">
+                  <Button size="lg" className="text-lg px-8 h-auto min-h-14 py-3 max-w-full whitespace-normal shadow-sm">
                     SAT Math Practice Resources on TPT
                   </Button>
                 </a>

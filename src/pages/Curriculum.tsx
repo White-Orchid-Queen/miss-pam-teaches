@@ -139,7 +139,7 @@ const Curriculum = () => {
             <p className="text-muted-foreground mb-8">
               Get instant lifetime access to the entire 10-week curriculum.
             </p>
-            <Button size="lg" className="px-10 h-14 text-lg">
+            <Button size="lg" className="px-10 h-auto min-h-14 py-3 max-w-full whitespace-normal text-lg">
               Get the Writing System for $27
             </Button>
           </div>
