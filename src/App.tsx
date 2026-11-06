@@ -17,6 +17,7 @@ import Grammar from "./pages/Grammar";
 import MathTutoring from "./pages/MathTutoring";
 import EnglishWritingPrograms from "./pages/EnglishWritingPrograms";
 import SatPrep from "./pages/SatPrep";
+import Debate from "./pages/Debate";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
             element={<EnglishWritingPrograms />}
           />
           <Route path="/sat-prep" element={<SatPrep />} />
+          <Route path="/debate" element={<Debate />} />
           <Route path="/book-consultation" element={<BookConsultation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

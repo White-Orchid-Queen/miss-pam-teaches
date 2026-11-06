@@ -1,89 +1,105 @@
 import { Button } from "@/components/ui/button";
-import { GraduationCap, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { GraduationCap, Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+const navLinks = [
+  { to: "/tutoring", label: "Tutoring" },
+  { to: "/coaching", label: "Coaching" },
+  { to: "/persuasive-writing", label: "Persuasive Writing" },
+  { to: "/debate", label: "Debate" },
+  { to: "/creative-writing", label: "Creative Writing" },
+  { to: "/state-testing", label: "State Testing" },
+  { to: "/grammar", label: "Grammar" },
+  { to: "/math-tutoring", label: "Math Tutoring" },
+  { to: "/english-writing-programs", label: "English & Writing" },
+  { to: "/sat-prep", label: "SAT Prep" },
+  { to: "/shop", label: "Shop" },
+];
+
 export const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  // Close the phone menu when the page changes or Escape is pressed.
+  useEffect(() => setMenuOpen(false), [pathname]);
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
       <nav className="bg-background/80 backdrop-blur-md border-b">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
+          <Link to="/" className="flex items-center gap-2 shrink-0">
             <img
               src="https://vibe.filesafe.space/1778675984868425758/attachments/3276d80c-5e72-409c-a69e-246cf64b69e4.png"
               alt="Miss Pam Teaches Logo"
               className="w-10 h-10 object-contain rounded-lg"
             />
-            <span className="font-bold text-xl tracking-tight">
+            <span className="font-bold text-xl tracking-tight whitespace-nowrap">
               Miss Pam Teaches
             </span>
           </Link>
-          <div className="hidden md:flex items-center gap-6">
-            <Link
-              to="/tutoring"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Tutoring
-            </Link>
-            <Link
-              to="/coaching"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Coaching
-            </Link>
-            <Link
-              to="/persuasive-writing"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Persuasive Writing
-            </Link>
-            <Link
-              to="/creative-writing"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Creative Writing
-            </Link>
-            <Link
-              to="/state-testing"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              State Testing
-            </Link>
-            <Link
-              to="/grammar"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Grammar
-            </Link>
-            <Link
-              to="/math-tutoring"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Math Tutoring
-            </Link>
-            <Link
-              to="/english-writing-programs"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              English & Writing
-            </Link>
-            <Link
-              to="/sat-prep"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              SAT Prep
-            </Link>
-            <Link
-              to="/shop"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Shop
-            </Link>
-            <Link to="/book-consultation">
+          <div className="hidden xl:flex items-center gap-4 min-w-0">
+            {navLinks.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="text-sm font-medium leading-tight text-center hover:text-primary transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+            <Link to="/book-consultation" className="shrink-0">
               <Button size="sm">Book a Consultation</Button>
             </Link>
           </div>
+          <button
+            type="button"
+            className="xl:hidden inline-flex items-center gap-2 h-10 px-3 rounded-md border border-border text-sm font-semibold"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            {menuOpen ? (
+              <X className="w-5 h-5" aria-hidden="true" />
+            ) : (
+              <Menu className="w-5 h-5" aria-hidden="true" />
+            )}
+            Menu
+          </button>
         </div>
+        {menuOpen && (
+          <div
+            id="mobile-menu"
+            className="xl:hidden border-t bg-background max-h-[calc(100vh-4rem)] overflow-y-auto"
+          >
+            <ul className="container mx-auto px-4 py-3 grid sm:grid-cols-2 gap-x-6">
+              {navLinks.map((l) => (
+                <li key={l.to}>
+                  <Link
+                    to={l.to}
+                    aria-current={pathname === l.to ? "page" : undefined}
+                    className={`block py-3 text-base font-medium border-b border-border/60 ${
+                      pathname === l.to ? "text-primary font-bold" : "text-foreground/80"
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="container mx-auto px-4 pb-4">
+              <Link to="/book-consultation">
+                <Button className="w-full h-12 text-base">Book a Consultation</Button>
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
     </div>
   );
