@@ -29,7 +29,7 @@ type Step = {
   tint: string;
 };
 
-// The six parts of every argument. Used in all 16 weeks.
+// The six parts of every argument. Used every week.
 const steps: Step[] = [
   {
     name: "Claim",
@@ -171,7 +171,7 @@ const ladder: { weeks: string; name: string; text: string; Icon: LucideIcon }[] 
 const Debate = () => {
   useSEO(
     "Build a Case: Debate Prep for Grades 5–9 | Miss Pam Teaches",
-    "Build the Foundations of an Argument is a 16-week debate and argument writing series for grades 5–7, part of the Build a Case program. Students learn claim, reason, evidence, explanation, counterclaim, and response, then build stronger arguments on their own.",
+    "Build the Foundations of an Argument is a debate and argument writing series for grades 5–7, part of the Build a Case program. Students learn claim, reason, evidence, explanation, counterclaim, and response, then build stronger arguments on their own.",
   );
 
   return (
