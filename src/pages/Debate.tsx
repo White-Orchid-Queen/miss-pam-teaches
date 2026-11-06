@@ -171,7 +171,7 @@ const ladder: { weeks: string; name: string; text: string; Icon: LucideIcon }[] 
 const Debate = () => {
   useSEO(
     "Build a Case: Debate Prep for Grades 5–9 | Miss Pam Teaches",
-    "Build a Case is a debate and argument writing program in two series: Build the Foundations of an Argument (grades 5–7) and Build and Defend a Case (grades 7–9). Students learn claim, reason, evidence, explanation, counterclaim, and response.",
+    "Build the Foundations of an Argument is a 16-week debate and argument writing series for grades 5–7, part of the Build a Case program. Students learn claim, reason, evidence, explanation, counterclaim, and response, then build stronger arguments on their own.",
   );
 
   return (
@@ -183,9 +183,9 @@ const Debate = () => {
           <div className="text-center mb-16 md:mb-20">
             <BuildACaseLogo className="mb-8 max-w-full" />
             <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed font-medium mb-8">
-              A debate and argument writing program in two series. Students
-              learn to build an argument, prove it with evidence, and defend it
-              against the other side.
+              A debate and argument writing program. Students learn to build an
+              argument, prove it with evidence, and defend it against the other
+              side.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/book-consultation" className="w-full sm:w-auto">
@@ -208,15 +208,18 @@ const Debate = () => {
           {/* The two series */}
           <section id="series" className="mb-20 md:mb-24 scroll-mt-28">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-10">
-              Two Series, One Process
+              Choose a Series
             </h2>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <div className="bg-slate-50 rounded-3xl p-6 md:p-8 border border-border/50 shadow-sm flex flex-col">
                 <SeriesLogo grades="5th–7th Grade" title="Build the Foundations of an Argument" className="mb-6" />
+                <p className="text-sm font-bold uppercase tracking-wider text-center text-muted-foreground mb-3">
+                  Weeks 1–8 on TPT now • Weeks 9–16 coming soon
+                </p>
                 <p className="text-foreground/80 mb-6 flex-grow">
-                  Students learn the six parts of an argument with plenty of
-                  support, then use fewer supports each week until they build a
-                  case on their own.
+                  Weeks 1–8 teach the six parts of an argument with support
+                  that fades each week. Weeks 9–16 make every part stronger,
+                  from better evidence to a full rebuttal.
                 </p>
                 <div className="flex flex-col gap-3">
                   <a href="#foundations">
@@ -231,28 +234,28 @@ const Debate = () => {
                       variant="outline"
                       className="w-full h-12 text-base border-primary text-primary hover:bg-primary/5"
                     >
-                      Get the Workbook on TPT
+                      Get Weeks 1–8 on TPT
                     </Button>
                   </a>
                 </div>
               </div>
               <div className="bg-slate-50 rounded-3xl p-6 md:p-8 border border-border/50 shadow-sm flex flex-col">
                 <SeriesLogo grades="7th–9th Grade" title="Build and Defend a Case" className="mb-6" />
+                <p className="text-sm font-bold uppercase tracking-wider text-center text-muted-foreground mb-3">
+                  In Tutoring Now • Not on TPT Yet
+                </p>
                 <p className="text-foreground/80 mb-6 flex-grow">
-                  Students keep the same six-part process and make every part
-                  stronger: better evidence, source checks, deeper reasoning,
-                  and rebuttals that hold up in a real debate.
+                  The series for older students, taught one-on-one with Miss
+                  Pam. It uses the same six-part process with harder topics and
+                  stronger debate skills.
                 </p>
                 <div className="flex flex-col gap-3">
-                  <a href="#defend">
-                    <Button className="w-full h-12 text-base shadow-sm">See the Build and Defend Plan</Button>
-                  </a>
                   <Link to="/book-consultation">
                     <Button
                       variant="outline"
                       className="w-full h-12 text-base border-primary text-primary hover:bg-primary/5"
                     >
-                      Ask About This Series
+                      Ask About Build and Defend a Case
                     </Button>
                   </Link>
                 </div>
@@ -267,7 +270,7 @@ const Debate = () => {
                 The Case-Building Process
               </h2>
               <p className="text-lg text-foreground/80">
-                Both series use the same six parts. Students learn them in
+                Every week uses the same six parts. Students learn them in
                 order, then make each part stronger.
               </p>
             </div>
@@ -298,10 +301,10 @@ const Debate = () => {
           <section id="foundations" className="mb-20 md:mb-24 scroll-mt-28">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="bg-primary/10 text-primary text-sm font-bold px-4 py-1.5 rounded-full">
-                Series 1 • 5th–7th Grade • Weeks 1–8
+                Build the Foundations of an Argument • Weeks 1–8 • On TPT Now
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-primary mt-6 mb-4">
-                Build the Foundations of an Argument
+                Build the Foundation
               </h2>
               <p className="text-lg text-foreground/80">
                 Students learn the six parts with plenty of support. Each stage
@@ -377,21 +380,30 @@ const Debate = () => {
                 <span>More independence</span>
               </div>
             </div>
+            <div className="text-center mt-8">
+              <a href="https://www.teacherspayteachers.com/Product/Argument-Writing-Debate-Prep-Grades-57-8-Weeks-Teacher-Guide-17404401" target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto h-12 px-8 text-base shadow-sm">
+                  Get Weeks 1–8 on TPT
+                </Button>
+              </a>
+              <p className="text-sm text-muted-foreground mt-3">
+                Printable student workbook and parent/teacher guide.
+              </p>
+            </div>
           </section>
 
           {/* Weeks 9–16 */}
-          <section id="defend" className="mb-20 md:mb-24 scroll-mt-28">
+          <section id="strengthen" className="mb-20 md:mb-24 scroll-mt-28">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="bg-primary/10 text-primary text-sm font-bold px-4 py-1.5 rounded-full">
-                Series 2 • 7th–9th Grade • Weeks 9–16
+                Build the Foundations of an Argument • Weeks 9–16 • Coming Soon
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-primary mt-6 mb-4">
-                Build and Defend a Case
+                Strengthen the Case
               </h2>
               <p className="text-lg text-foreground/80">
-                Picks up where Foundations ends. Students use the six-part
-                process on their own, and each week adds a harder reasoning or
-                evidence skill.
+                Students keep the same six-part process and use it on their
+                own, while each week adds a harder reasoning or evidence skill.
               </p>
             </div>
             <ol className="relative max-w-3xl mx-auto space-y-4 before:absolute before:left-6 before:top-6 before:bottom-6 before:w-0.5 before:bg-primary/10">
@@ -445,7 +457,7 @@ const Debate = () => {
                   experience:
                     "Practiced developing claims, using evidence, explaining reasoning, and answering counterarguments through the lessons.",
                   result:
-                    "Took part in an after-school debate program (not school-sponsored) and said he felt prepared because he knew how to build and defend his case. He reported that he believed he earned first place.",
+                    "Took part in a mock debate at school and said he felt prepared because he knew how to build and defend his case. He told Miss Pam he thought he won.",
                 },
               ].map((s) => (
                 <div
@@ -489,7 +501,7 @@ const Debate = () => {
                 <Check className="w-7 h-7 shrink-0 text-emerald-600" aria-hidden="true" />
                 <div>
                   <h3 className="text-xl font-bold text-primary mb-1">
-                    Foundations builds confidence and independence.
+                    Weeks 1–8 build confidence and independence.
                   </h3>
                   <p className="text-foreground/80">
                     Students learn the parts of an argument with clear support
@@ -501,7 +513,7 @@ const Debate = () => {
                 <Check className="w-7 h-7 shrink-0 text-emerald-600" aria-hidden="true" />
                 <div>
                   <h3 className="text-xl font-bold text-primary mb-1">
-                    Build and Defend increases the rigor.
+                    Weeks 9–16 increase the rigor.
                   </h3>
                   <p className="text-foreground/80">
                     Students develop stronger evidence, deeper reasoning, source

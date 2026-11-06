@@ -553,7 +553,7 @@ const PersuasiveWriting = () => {
               <p className="text-sm text-muted-foreground mt-6">
                 Ready for more?{" "}
                 <Link to="/debate" className="font-semibold text-primary underline underline-offset-4">
-                  See both Build a Case debate series (grades 5–9)
+                  See the full 16-week Build a Case debate series
                 </Link>
               </p>
             </div>
