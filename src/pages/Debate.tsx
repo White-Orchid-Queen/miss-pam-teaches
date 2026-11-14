@@ -3,7 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/use-seo";
 import { BubblesMark, BuildACaseLogo, SeriesLogo } from "@/components/BuildACaseLogo";
-import { BYC_BOOK1_AMAZON_URL, BYC_BOOK1_TPT_URL } from "@/lib/buildYourCase";
+import {
+  BYC_BOOK1_AMAZON_URL,
+  BYC_BOOK1_TPT_URL,
+  FOTA_AMAZON_URL,
+  FOTA_TPT_URL,
+} from "@/lib/buildYourCase";
 import {
   BarChart3,
   BookOpen,
@@ -202,7 +207,7 @@ const BookOneButtons = ({ stacked = false }: { stacked?: boolean }) => {
 const Debate = () => {
   useSEO(
     "Build Your Case: Argument Writing & Debate Prep for Grades 5–9 | Miss Pam Teaches",
-    "Build Your Case is an argument writing and debate prep series. Argument Builder (grades 5–7) teaches claim, reason, support, explanation, counterclaim, and response with support that fades each week. Available as a printable PDF on TPT and as a paperback.",
+    "Build Your Case is an argument writing and debate prep series. Argument Builder (grades 5–7) teaches claim, reason, support, explanation, counterclaim, and response with support that fades each week. Start with the 3-lesson Claim, Reason & Explanation mini unit (grades 6–8), available as a printable PDF on TPT and as a paperback on Amazon.",
   );
 
   return (
@@ -224,6 +229,15 @@ const Debate = () => {
                   Discuss Debate Tutoring
                 </Button>
               </Link>
+              <a href="#start-here" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto h-12 px-8 text-base border-primary text-primary hover:bg-primary/5"
+                >
+                  Start Here: 3-Lesson Mini Unit
+                </Button>
+              </a>
               <a href="#series" className="w-full sm:w-auto">
                 <Button
                   size="lg"
@@ -235,6 +249,106 @@ const Debate = () => {
               </a>
             </div>
           </div>
+
+          {/* Start here: 3-lesson mini unit (From Opinions to Arguments) */}
+          <section id="start-here" className="mb-20 md:mb-24 scroll-mt-28">
+            <div className="bg-white border border-sky-200 rounded-3xl p-6 md:p-12 shadow-sm">
+              <div className="text-center max-w-3xl mx-auto mb-10">
+                <div className="inline-flex flex-wrap items-center justify-center gap-2 bg-sky-50 text-sky-800 text-xs md:text-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4 border border-sky-200">
+                  <span>Start Here</span>
+                  <span aria-hidden="true">•</span>
+                  <span>3 Lessons</span>
+                  <span aria-hidden="true">•</span>
+                  <span>Grades 6–8</span>
+                  <span aria-hidden="true">•</span>
+                  <span>Paperback or PDF</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                  Argument Writing Mini Unit: Claim, Reason &amp; Explanation
+                </h2>
+                <p className="text-lg text-sky-900 font-semibold mb-4">
+                  From Opinions to Arguments: a hands-on workbook that helps
+                  students turn an opinion into a clear claim, support it with a
+                  reason, and explain their thinking.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  A short, low-pressure way to begin before the 8-week Build
+                  Your Case series. Students do the writing. No teacher or
+                  parent research required.
+                </p>
+              </div>
+
+              <ol className="grid md:grid-cols-3 gap-6 mb-10">
+                {[
+                  {
+                    lesson: "Lesson 1",
+                    skill: "Turn an opinion into a claim",
+                    topic: "Should students help create classroom rules?",
+                  },
+                  {
+                    lesson: "Lesson 2",
+                    skill: "Support a claim with a reason",
+                    topic: "Should students choose their school projects?",
+                  },
+                  {
+                    lesson: "Lesson 3",
+                    skill: "Explain how your reason works",
+                    topic: "Should schools hold outdoor learning days?",
+                  },
+                ].map((l) => (
+                  <li
+                    key={l.lesson}
+                    className="bg-slate-50 rounded-2xl p-6 border border-border/50 shadow-sm"
+                  >
+                    <p className="text-xs font-bold uppercase tracking-wider text-sky-700 mb-1">
+                      {l.lesson}
+                    </p>
+                    <h3 className="text-lg font-bold text-primary mb-2">{l.skill}</h3>
+                    <p className="text-sm text-foreground/80">{l.topic}</p>
+                  </li>
+                ))}
+              </ol>
+
+              <div className="text-center">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <a
+                    href={FOTA_TPT_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button
+                      size="lg"
+                      className="w-full sm:w-auto h-12 px-8 text-base shadow-sm bg-sky-700 hover:bg-sky-800 text-white"
+                    >
+                      Printable PDF on TPT
+                    </Button>
+                  </a>
+                  <a
+                    href={FOTA_AMAZON_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full sm:w-auto h-12 px-8 text-base border-sky-700 text-sky-800 hover:bg-sky-50"
+                    >
+                      Paperback on Amazon
+                    </Button>
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground mt-3">
+                  Printable PDF: 18 pages, $3.50, rubric included • Paperback: 26
+                  pages, $9.99
+                </p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Ready for more? Continue with Argument Builder below.
+                </p>
+              </div>
+            </div>
+          </section>
 
           {/* The two series */}
           <section id="series" className="mb-20 md:mb-24 scroll-mt-28">
