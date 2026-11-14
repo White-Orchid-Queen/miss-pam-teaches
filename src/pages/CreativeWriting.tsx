@@ -90,6 +90,20 @@ const CreativeWriting = () => {
                         Download the Free Sampler
                       </Button>
                     </a>
+                    <a
+                      href="https://www.teacherspayteachers.com/Product/Neon-Vale-FREE-Sci-Fi-Creative-Writing-Prompts-Story-Architect-Sampler-16059611"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="lg"
+                        className="text-lg px-8 h-14 border-2 border-primary text-primary hover:bg-primary/10"
+                      >
+                        Get It Free on TPT
+                      </Button>
+                    </a>
                     <Button
                       type="button"
                       variant="outline"
@@ -195,7 +209,7 @@ const CreativeWriting = () => {
                       badge: "bg-pink-500/20 text-pink-300 border-pink-500/30",
                       desc: "Master realistic character voices, subtext, and mystery through conversations and holo-broadcasts.",
                       focus: "Voice, subtext & verbal conflict",
-                      link: "https://www.teacherspayteachers.com/My-Products/category:1647875",
+                      link: "https://www.teacherspayteachers.com/Product/Sci-Fi-Creative-Writing-Prompt-The-Girl-on-the-Billboard-Dialogue-17826629",
                     },
                     {
                       num: "04",
@@ -207,7 +221,7 @@ const CreativeWriting = () => {
                         "bg-purple-500/20 text-purple-300 border-purple-500/30",
                       desc: "Plant subtle mechanical clues, narrative breadcrumbs, and warnings that pay off in surprising revelations.",
                       focus: "Breadcrumbs, symbols & clues",
-                      link: "https://www.teacherspayteachers.com/My-Products/category:1647875",
+                      link: "https://www.teacherspayteachers.com/Product/Sci-Fi-Creative-Writing-Prompt-The-Photon-Viper-Mechanic-Foreshadowing-17826660",
                     },
                     {
                       num: "05",
@@ -231,7 +245,7 @@ const CreativeWriting = () => {
                         "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
                       desc: "Craft immersive futuristic infrastructure, atmospheric alleyways, and shifting urban secrets.",
                       focus: "Immersive setting & environmental logic",
-                      link: "https://www.teacherspayteachers.com/My-Products/category:1647875",
+                      link: "https://www.teacherspayteachers.com/Product/Sci-Fi-Creative-Writing-Prompt-The-Street-That-Disappeared-Worldbuilding-17826738",
                     },
                     {
                       num: "07",
@@ -242,7 +256,7 @@ const CreativeWriting = () => {
                       badge: "bg-sky-500/20 text-sky-300 border-sky-500/30",
                       desc: "Bring story threads together into a decisive dilemma, decisive character resolution, and grand finale.",
                       focus: "Decisive moral dilemmas & resolution",
-                      link: "https://www.teacherspayteachers.com/My-Products/category:1647875",
+                      link: "https://www.teacherspayteachers.com/Product/Sci-Fi-Creative-Writing-Prompt-The-Last-Light-in-Neon-Vale-Climax-17826760",
                     },
                   ].map((story) => (
                     <div
@@ -288,6 +302,49 @@ const CreativeWriting = () => {
                       </div>
                     </div>
                   ))}
+                </div>
+
+                {/* Bonus: Nova & Pip */}
+                <div className="mt-6 p-5 md:p-6 rounded-2xl border border-teal-500/40 bg-teal-950/20 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <span className="text-xs font-mono font-bold tracking-wider text-slate-400">
+                        MEET THE PEOPLE OF NEON VALE
+                      </span>
+                      <span className="text-xs px-2.5 py-0.5 rounded-full font-semibold border bg-teal-500/20 text-teal-300 border-teal-500/30">
+                        Dialogue
+                      </span>
+                    </div>
+                    <h4 className="text-lg font-bold text-white mb-2">
+                      Nova &amp; Pip: Ninety Seconds to Dock
+                    </h4>
+                    <p className="text-sm text-slate-300 leading-relaxed">
+                      Nova is an AI transportation robot who looks like a woman.
+                      Pip is her robot dog. Together they keep Neon Vale running
+                      smoothly and safely, from the flying cars over the city to
+                      intergalactic travel on the home planet. Students write
+                      what happens when the clock is ticking and every driver,
+                      captain, and passenger needs to hear the right thing from
+                      Nova.
+                    </p>
+                    <p className="text-[11px] text-slate-400 font-medium mt-3">
+                      Guided story writing for young adult writers • Grades 6–12
+                      • 8 pages • $3
+                    </p>
+                  </div>
+                  <a
+                    href="https://www.teacherspayteachers.com/Product/Sci-Fi-Creative-Writing-Prompt-Dialogue-Nova-Pip-Ninety-Seconds-to-Dock-18184645"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0"
+                  >
+                    <Button
+                      size="sm"
+                      className="h-9 px-4 text-sm font-semibold bg-white text-slate-950 hover:bg-slate-200"
+                    >
+                      Purchase Packet →
+                    </Button>
+                  </a>
                 </div>
 
                 <div className="mt-8 text-center p-4 rounded-xl bg-slate-950/60 border border-slate-800">
