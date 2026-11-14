@@ -153,12 +153,16 @@ const CreativeWriting = () => {
               <div>
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-800">
                   <div>
+                    <p className="text-xs font-mono font-bold tracking-wider text-cyan-300 uppercase mb-1">
+                      Meet the People of Neon Vale
+                    </p>
                     <h3 className="text-xl font-bold text-white">
                       Story Architect Challenges (7 Adventures)
                     </h3>
                     <p className="text-sm text-slate-400">
-                      Each story features a unique premise, craft skill, and
-                      writing architecture.
+                      Each story puts your student inside a different person's
+                      point of view in Neon Vale, with one writing craft skill
+                      to practice.
                     </p>
                   </div>
                   <a
@@ -309,7 +313,7 @@ const CreativeWriting = () => {
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-2 mb-3">
                       <span className="text-xs font-mono font-bold tracking-wider text-slate-400">
-                        MEET THE PEOPLE OF NEON VALE
+                        MEET THE AI ROBOTS OF NEON VALE
                       </span>
                       <span className="text-xs px-2.5 py-0.5 rounded-full font-semibold border bg-teal-500/20 text-teal-300 border-teal-500/30">
                         Dialogue
