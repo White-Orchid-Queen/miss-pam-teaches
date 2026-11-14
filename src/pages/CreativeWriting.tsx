@@ -319,11 +319,12 @@ const CreativeWriting = () => {
                       Nova &amp; Pip: Ninety Seconds to Dock
                     </h4>
                     <p className="text-sm text-slate-300 leading-relaxed">
-                      Nova is an AI transportation robot who looks like a woman.
-                      Pip is her robot dog. Together they keep Neon Vale running
-                      smoothly and safely, from the flying cars over the city to
-                      intergalactic travel on the home planet. Students write
-                      what happens when the clock is ticking and every driver,
+                      Nova is an AI robot who looks like a woman and manages
+                      transportation in Neon Vale: the flying cars over the city
+                      and the docking of intergalactic spaceships landing on the
+                      home planet. Pip is her robot dog. Together they keep the
+                      city running smoothly and safely. Students write what
+                      happens when the clock is ticking and every driver,
                       captain, and passenger needs to hear the right thing from
                       Nova.
                     </p>
