@@ -233,7 +233,7 @@ const CreativeWriting = () => {
                         "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
                       desc: "Develop layered character motivations, distinct habits, and interpersonal bonds over late-night meals.",
                       focus: "Motivations, flaws & relationships",
-                      link: "https://www.teacherspayteachers.com/My-Products/category:1647875",
+                      link: "https://www.teacherspayteachers.com/Product/Sci-Fi-Creative-Writing-Prompt-Galactic-Ramen-at-Midnight-Characterization-17826698",
                     },
                     {
                       num: "06",
