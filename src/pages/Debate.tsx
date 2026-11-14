@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/use-seo";
 import { BubblesMark, BuildACaseLogo, SeriesLogo } from "@/components/BuildACaseLogo";
+import { BYC_BOOK1_AMAZON_URL, BYC_BOOK1_TPT_URL } from "@/lib/buildYourCase";
 import {
   BarChart3,
   BookOpen,
@@ -44,81 +45,81 @@ const steps: Step[] = [
     tint: "bg-blue-50 text-blue-800 border-blue-200",
   },
   {
-    name: "Evidence",
-    text: "Use relevant facts, examples, or data.",
+    name: "Support",
+    text: "Give a specific example that shows your reason.",
     Icon: Layers,
     tint: "bg-emerald-50 text-emerald-800 border-emerald-200",
   },
   {
     name: "Explanation",
-    text: "Show how the evidence supports your claim.",
+    text: "Show how your support connects to your claim.",
     Icon: BookOpen,
     tint: "bg-amber-50 text-amber-800 border-amber-200",
   },
   {
     name: "Counterclaim",
-    text: "Present a reasonable opposing viewpoint.",
+    text: "Describe the other side fairly.",
     Icon: Scale,
     tint: "bg-orange-50 text-orange-800 border-orange-200",
   },
   {
     name: "Response",
-    text: "Answer the counterclaim with evidence and reasoning.",
+    text: "Answer that concern directly with clear reasoning.",
     Icon: ShieldCheck,
     tint: "bg-rose-50 text-rose-800 border-rose-200",
   },
 ];
 
-// Weeks 1–8: the supports students get, and which stages still use them.
+// Weeks 1–8: matches the Build Your Case Book 1 workbook and its Parent & Teacher Guide.
 const stages = [
-  { weeks: "Weeks 1–2", name: "Watch and Learn" },
-  { weeks: "Weeks 3–4", name: "Try It Together" },
-  { weeks: "Weeks 5–6", name: "Take the Lead" },
-  { weeks: "Weeks 7–8", name: "Build Your Own Case" },
+  { weeks: "Weeks 1–3", name: "Learn from Models" },
+  { weeks: "Weeks 4–5", name: "Find Your Own Reasons" },
+  { weeks: "Week 6", name: "Independence Checkpoint" },
+  { weeks: "Weeks 7–8", name: "Answer the Other Side" },
 ];
 
 const supports: { name: string; text: string; Icon: LucideIcon; on: boolean[] }[] = [
   {
-    name: "Model Examples",
-    text: "See what a strong argument looks like.",
+    name: "Clear Definitions",
+    text: "Each part of the argument is explained every week.",
+    Icon: Layers,
+    on: [true, true, true, true],
+  },
+  {
+    name: "Weak vs. Stronger Examples",
+    text: "See what makes a claim, example, or explanation strong.",
     Icon: BookOpen,
     on: [true, true, false, false],
   },
   {
-    name: "Sentence Starters",
-    text: "Get help getting started.",
-    Icon: MessageCircle,
-    on: [true, true, false, false],
-  },
-  {
-    name: "Guided Questions",
-    text: "Think through each part.",
-    Icon: CheckSquare,
-    on: [true, true, true, false],
-  },
-  {
-    name: "Evidence Cards",
-    text: "Practice finding and using evidence.",
+    name: "Lists of Possible Reasons",
+    text: "Choose from reasons before writing your own.",
     Icon: FileText,
-    on: [true, true, true, false],
-  },
-  {
-    name: "Planning Templates",
-    text: "Organize your ideas.",
-    Icon: Layers,
-    on: [true, true, true, false],
-  },
-  {
-    name: "Step-by-Step Instructions",
-    text: "Follow a clear process.",
-    Icon: Users,
     on: [true, false, false, false],
   },
   {
-    name: "Independent Practice",
-    text: "Build the whole case on your own.",
+    name: "Sentence Frames",
+    text: "Starters in the Week 1 planner and the Weeks 7–8 counterclaim pages.",
+    Icon: MessageCircle,
+    on: [true, false, false, true],
+  },
+  {
+    name: "Ask Yourself Questions",
+    text: "Planning questions replace the models.",
+    Icon: CheckSquare,
+    on: [false, true, true, true],
+  },
+  {
+    name: "Independent Planning",
+    text: "Plan and write the whole argument yourself.",
     Icon: Target,
-    on: [false, false, false, true],
+    on: [false, false, true, true],
+  },
+  {
+    name: "Parent & Teacher Guide",
+    text: "Model arguments and coaching questions for the adult.",
+    Icon: Users,
+    on: [true, true, true, true],
   },
 ];
 
@@ -138,8 +139,8 @@ const ladder: { weeks: string; name: string; text: string; Icon: LucideIcon }[] 
   },
   {
     weeks: "Week 12",
-    name: "Evaluate Sources",
-    text: "Check credibility, purpose, and reliability.",
+    name: "Weigh the Evidence",
+    text: "Judge which supplied evidence is most reliable, and explain why.",
     Icon: Search,
   },
   {
@@ -168,10 +169,40 @@ const ladder: { weeks: string; name: string; text: string; Icon: LucideIcon }[] 
   },
 ];
 
+/**
+ * Where to buy Book 1. Same book in two formats: a printable PDF on TPT and a
+ * paperback on Amazon. Until BYC_BOOK1_AMAZON_URL is filled in, the Amazon
+ * slot shows "Paperback coming soon on Amazon" instead of a link.
+ */
+const BookOneButtons = ({ stacked = false }: { stacked?: boolean }) => {
+  const wrap = stacked
+    ? "flex flex-col gap-3"
+    : "flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4";
+  const size = stacked ? "w-full h-12 text-base" : "w-full sm:w-auto h-12 px-8 text-base";
+  return (
+    <div className={wrap}>
+      <a href={BYC_BOOK1_TPT_URL} target="_blank" rel="noopener noreferrer" className={stacked ? "" : "w-full sm:w-auto"}>
+        <Button className={`${size} shadow-sm`}>Get the Printable PDF on TPT</Button>
+      </a>
+      {BYC_BOOK1_AMAZON_URL ? (
+        <a href={BYC_BOOK1_AMAZON_URL} target="_blank" rel="noopener noreferrer" className={stacked ? "" : "w-full sm:w-auto"}>
+          <Button variant="outline" className={`${size} border-primary text-primary hover:bg-primary/5`}>
+            Get the Paperback on Amazon
+          </Button>
+        </a>
+      ) : (
+        <p className={`${stacked ? "" : "w-full sm:w-auto"} text-sm font-semibold text-muted-foreground text-center`}>
+          Paperback coming soon on Amazon
+        </p>
+      )}
+    </div>
+  );
+};
+
 const Debate = () => {
   useSEO(
-    "Build a Case: Debate Prep for Grades 5–9 | Miss Pam Teaches",
-    "Build the Foundations of an Argument is a debate and argument writing series for grades 5–7, part of the Build a Case program. Students learn claim, reason, evidence, explanation, counterclaim, and response, then build stronger arguments on their own.",
+    "Build Your Case: Argument Writing & Debate Prep for Grades 5–9 | Miss Pam Teaches",
+    "Build Your Case is an argument writing and debate prep series. Argument Builder (grades 5–7) teaches claim, reason, support, explanation, counterclaim, and response with support that fades each week. Available as a printable PDF on TPT and as a paperback.",
   );
 
   return (
@@ -212,35 +243,31 @@ const Debate = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <div className="bg-slate-50 rounded-3xl p-6 md:p-8 border border-border/50 shadow-sm flex flex-col">
-                <SeriesLogo grades="5th–7th Grade" title="Build the Foundations of an Argument" className="mb-6" />
+                <SeriesLogo grades="5th–7th Grade" title="Argument Builder" subtitle="Level 1 • Argument Foundations" className="mb-6" />
                 <p className="text-sm font-bold uppercase tracking-wider text-center text-muted-foreground mb-3">
-                  Weeks 1–8 on TPT now • Weeks 9–16 coming soon
+                  Book 1 (Weeks 1–8) available now
                 </p>
                 <p className="text-foreground/80 mb-6 flex-grow">
-                  Weeks 1–8 teach the six parts of an argument with support
-                  that fades each week. Weeks 9–16 make every part stronger,
-                  from better evidence to a full rebuttal.
+                  A 24-week path in three 8-week books. Book 1 teaches the six
+                  parts of an argument with support that fades each week, plus
+                  a Parent &amp; Teacher Guide. Books 2 and 3 make every part
+                  stronger and move students to defending their case on their
+                  own.
                 </p>
                 <div className="flex flex-col gap-3">
                   <a href="#foundations">
-                    <Button className="w-full h-12 text-base shadow-sm">See the Foundations Plan</Button>
-                  </a>
-                  <a
-                    href="https://www.teacherspayteachers.com/Product/Argument-Writing-Debate-Prep-Grades-57-8-Weeks-Teacher-Guide-17404401"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
                     <Button
                       variant="outline"
                       className="w-full h-12 text-base border-primary text-primary hover:bg-primary/5"
                     >
-                      Get Weeks 1–8 on TPT
+                      See the Book 1 Plan
                     </Button>
                   </a>
+                  <BookOneButtons stacked />
                 </div>
               </div>
               <div className="bg-slate-50 rounded-3xl p-6 md:p-8 border border-border/50 shadow-sm flex flex-col">
-                <SeriesLogo grades="7th–9th Grade" title="Build and Defend a Case" className="mb-6" />
+                <SeriesLogo grades="7th–9th Grade" title="Argument Challenger" subtitle="Level 2 • Analytical Foundations" className="mb-6" />
                 <p className="text-sm font-bold uppercase tracking-wider text-center text-muted-foreground mb-3">
                   In Tutoring Now • Not on TPT Yet
                 </p>
@@ -255,7 +282,7 @@ const Debate = () => {
                       variant="outline"
                       className="w-full h-12 text-base border-primary text-primary hover:bg-primary/5"
                     >
-                      Ask About Build and Defend a Case
+                      Ask About Argument Challenger
                     </Button>
                   </Link>
                 </div>
@@ -301,7 +328,7 @@ const Debate = () => {
           <section id="foundations" className="mb-20 md:mb-24 scroll-mt-28">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="bg-primary/10 text-primary text-sm font-bold px-4 py-1.5 rounded-full">
-                Build the Foundations of an Argument • Weeks 1–8 • On TPT Now
+                Argument Builder • Book 1 • Weeks 1–8 • Available Now
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-primary mt-6 mb-4">
                 Build the Foundation
@@ -309,7 +336,8 @@ const Debate = () => {
               <p className="text-lg text-foreground/80">
                 Students learn the six parts with plenty of support. Each stage
                 removes a few supports, so students take more ownership every
-                week.
+                week. By Week 6, they plan and write a full argument on their
+                own.
               </p>
             </div>
 
@@ -381,13 +409,10 @@ const Debate = () => {
               </div>
             </div>
             <div className="text-center mt-8">
-              <a href="https://www.teacherspayteachers.com/Product/Argument-Writing-Debate-Prep-Grades-57-8-Weeks-Teacher-Guide-17404401" target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto h-12 px-8 text-base shadow-sm">
-                  Get Weeks 1–8 on TPT
-                </Button>
-              </a>
+              <BookOneButtons />
               <p className="text-sm text-muted-foreground mt-3">
-                Printable student workbook and parent/teacher guide.
+                89 pages: student workbook plus Parent &amp; Teacher Guide. Same
+                book as a printable PDF or a paperback.
               </p>
             </div>
           </section>
@@ -396,7 +421,7 @@ const Debate = () => {
           <section id="strengthen" className="mb-20 md:mb-24 scroll-mt-28">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="bg-primary/10 text-primary text-sm font-bold px-4 py-1.5 rounded-full">
-                Build the Foundations of an Argument • Weeks 9–16 • Coming Soon
+                Argument Builder • Book 2 • Weeks 9–16 • Coming Soon
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-primary mt-6 mb-4">
                 Strengthen the Case
@@ -427,6 +452,23 @@ const Debate = () => {
             </ol>
           </section>
 
+          {/* Weeks 17–24 */}
+          <section id="defend" className="mb-20 md:mb-24 scroll-mt-28">
+            <div className="text-center max-w-3xl mx-auto">
+              <span className="bg-primary/10 text-primary text-sm font-bold px-4 py-1.5 rounded-full">
+                Argument Builder • Book 3 • Weeks 17–24 • Coming Later
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mt-6 mb-4">
+                Defend the Case
+              </h2>
+              <p className="text-lg text-foreground/80">
+                Students write first, with no model or sentence frames. Then
+                they test their argument against new situations, qualify their
+                claim, propose a fair exception, and defend their case out loud.
+              </p>
+            </div>
+          </section>
+
           {/* Student experiences */}
           <section className="mb-20 md:mb-24">
             <div className="text-center max-w-3xl mx-auto mb-12">
@@ -441,17 +483,17 @@ const Debate = () => {
               {[
                 {
                   who: "Sixth Grade Student",
-                  series: "Build the Foundations of an Argument",
+                  series: "Argument Builder",
                   challenge:
                     "Learning the whole argument process and how all the parts fit together.",
                   experience:
                     "Worked through the lessons step by step, with guided practice and support.",
                   result:
-                    "Gained a clear understanding of how to build a complete argument using a claim, reasons, evidence, explanation, counterclaim, and response.",
+                    "Gained a clear understanding of how to build a complete argument using a claim, reasons, support, explanation, counterclaim, and response.",
                 },
                 {
                   who: "Eighth Grade Student",
-                  series: "Build and Defend a Case",
+                  series: "Argument Challenger",
                   challenge:
                     "It took time to understand the argument-building process and use it independently.",
                   experience:
@@ -496,7 +538,7 @@ const Debate = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-center text-primary mb-10">
               The Big Picture for Parents
             </h2>
-            <div className="grid md:grid-cols-2 gap-6 mb-10">
+            <div className="grid md:grid-cols-3 gap-6 mb-10">
               <div className="flex gap-4">
                 <Check className="w-7 h-7 shrink-0 text-emerald-600" aria-hidden="true" />
                 <div>
@@ -516,8 +558,20 @@ const Debate = () => {
                     Weeks 9–16 increase the rigor.
                   </h3>
                   <p className="text-foreground/80">
-                    Students develop stronger evidence, deeper reasoning, source
-                    evaluation, and more persuasive rebuttals.
+                    Students develop stronger support, deeper reasoning, careful
+                    weighing of evidence, and more persuasive rebuttals.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <Check className="w-7 h-7 shrink-0 text-emerald-600" aria-hidden="true" />
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-1">
+                    Weeks 17–24 build independence.
+                  </h3>
+                  <p className="text-foreground/80">
+                    Students write on their own, test their arguments, and
+                    defend their case out loud.
                   </p>
                 </div>
               </div>
@@ -525,7 +579,7 @@ const Debate = () => {
             <div className="text-center border-t border-border/50 pt-10">
               <BubblesMark className="w-16 mx-auto mb-4" />
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-6 font-medium">
-                Build a Case helps students move from learning the parts of an
+                Build Your Case helps students move from learning the parts of an
                 argument to using those skills in real discussions and debates.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

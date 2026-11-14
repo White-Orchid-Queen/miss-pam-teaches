@@ -53,7 +53,7 @@ const EnglishWritingPrograms = () => {
     },
     {
       accent: "#2D5A3D",
-      tag: "Build a Case",
+      tag: "Build Your Case",
       heading: "Argument & Critical Reasoning",
       subtitle: "Think. Reason. Persuade.",
       body: "Students learn to move beyond unsupported opinions by developing claims, examining evidence, explaining reasoning, evaluating opposing perspectives, and writing persuasive arguments.",
@@ -139,7 +139,7 @@ const EnglishWritingPrograms = () => {
                   </div>
                   <div className="bg-[#2D5A3D] text-white rounded-xl py-3 px-4 shadow-sm border border-white/10">
                     <div className="font-extrabold text-sm md:text-base tracking-wider uppercase">
-                      BUILD A CASE
+                      BUILD YOUR CASE
                     </div>
                     <div className="text-xs text-emerald-100 font-medium">
                       Reason with Evidence
@@ -221,7 +221,7 @@ const EnglishWritingPrograms = () => {
                           </li>
                         ))}
                       </ul>
-                      {p.tag === "Build a Case" && (
+                      {p.tag === "Build Your Case" && (
                         <div className="mt-6 pt-4 border-t border-slate-100">
                           <Link
                             to="/persuasive-writing"

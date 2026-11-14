@@ -63,12 +63,12 @@ const Swoosh = ({ className }: { className?: string }) => (
   </svg>
 );
 
-/** The main "Build a Case" logo: bubbles, wordmark, swoosh and tagline, stacked. */
+/** The main "Build Your Case" logo: bubbles, wordmark, swoosh and tagline, stacked. */
 export const BuildACaseLogo = ({ className }: { className?: string }) => (
   <div className={cn("inline-flex flex-col items-center text-center", className)}>
     <BubblesMark className="w-20 sm:w-24 md:w-28 mb-1" />
-    <h1 className="font-extrabold tracking-tight text-primary leading-none text-5xl sm:text-6xl md:text-7xl">
-      Build a Case
+    <h1 className="font-extrabold tracking-tight text-primary leading-none text-4xl sm:text-6xl md:text-7xl">
+      Build Your Case
       <span className="sr-only"> — Debate and Argument Writing for Grades 5–9</span>
     </h1>
     <Swoosh className="mt-3 max-w-[90%]" />
@@ -84,10 +84,12 @@ export const BuildACaseLogo = ({ className }: { className?: string }) => (
 export const SeriesLogo = ({
   grades,
   title,
+  subtitle,
   className,
 }: {
   grades: string;
   title: string;
+  subtitle?: string;
   className?: string;
 }) => (
   <div className={cn("flex flex-col items-center text-center", className)}>
@@ -99,8 +101,13 @@ export const SeriesLogo = ({
     </span>
     <div className="flex items-center gap-3">
       <BubblesMark className="w-14 sm:w-16 shrink-0" />
-      <span className="text-left font-extrabold tracking-tight text-primary leading-[1.05] text-2xl sm:text-3xl">
-        {title}
+      <span className="text-left">
+        <span className="block font-extrabold tracking-tight text-primary leading-[1.05] text-2xl sm:text-3xl">
+          {title}
+        </span>
+        {subtitle && (
+          <span className="block mt-1 text-sm sm:text-base font-semibold text-teal-700">{subtitle}</span>
+        )}
       </span>
     </div>
     <Swoosh className="mt-3 max-w-[85%]" />

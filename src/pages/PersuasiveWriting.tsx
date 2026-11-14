@@ -2,6 +2,7 @@ import { Navbar, Footer } from "@/components/landing/LandingComponents";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/use-seo";
+import { BYC_BOOK1_AMAZON_URL, BYC_BOOK1_TPT_URL } from "@/lib/buildYourCase";
 
 const PersuasiveWriting = () => {
   useSEO(
@@ -523,12 +524,14 @@ const PersuasiveWriting = () => {
                 Get the "Build Your Case" 8-Week Workbook
               </h4>
               <p className="text-muted-foreground max-w-xl mx-auto mb-6 text-sm">
-                Available as a printable packet on Teachers Pay Teachers, or
-                paired with weekly 1-on-1 coaching sessions.
+                Student workbook plus Parent &amp; Teacher Guide. Available as a
+                printable PDF on Teachers Pay Teachers
+                {BYC_BOOK1_AMAZON_URL ? " or as a paperback on Amazon" : " (paperback coming soon on Amazon)"},
+                or paired with weekly 1-on-1 coaching sessions.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="https://www.teacherspayteachers.com/Product/Argument-Writing-Debate-Prep-Grades-57-8-Weeks-Teacher-Guide-17404401"
+                  href={BYC_BOOK1_TPT_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto"
@@ -537,9 +540,25 @@ const PersuasiveWriting = () => {
                     size="lg"
                     className="w-full sm:w-auto h-13 px-8 text-base shadow-sm bg-emerald-700 hover:bg-emerald-800 text-white"
                   >
-                    Purchase on TPT
+                    Printable PDF on TPT
                   </Button>
                 </a>
+                {BYC_BOOK1_AMAZON_URL && (
+                  <a
+                    href={BYC_BOOK1_AMAZON_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full sm:w-auto h-13 px-8 text-base border-emerald-700 text-emerald-800 hover:bg-emerald-50"
+                    >
+                      Paperback on Amazon
+                    </Button>
+                  </a>
+                )}
                 <Link to="/book-consultation" className="w-full sm:w-auto">
                   <Button
                     size="lg"
@@ -553,7 +572,7 @@ const PersuasiveWriting = () => {
               <p className="text-sm text-muted-foreground mt-6">
                 Ready for more?{" "}
                 <Link to="/debate" className="font-semibold text-primary underline underline-offset-4">
-                  See the Build a Case debate series
+                  See the full Build Your Case debate series
                 </Link>
               </p>
             </div>

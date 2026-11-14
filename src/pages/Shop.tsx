@@ -1,6 +1,7 @@
 import { Navbar, Footer } from "@/components/landing/LandingComponents";
 import { Button } from "@/components/ui/button";
 import { useSEO } from "@/hooks/use-seo";
+import { BYC_BOOK1_TPT_URL } from "@/lib/buildYourCase";
 
 const Shop = () => {
   useSEO(
@@ -85,7 +86,7 @@ const Shop = () => {
                       Persuasive Writing Prompts
                     </a>
                     <a
-                      href="https://www.teacherspayteachers.com/Store/Miss-Pam-Teaches"
+                      href={BYC_BOOK1_TPT_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full max-w-sm shadow-sm shadow-slate-200 border-2 border-white bg-emerald-50 text-emerald-700 font-semibold px-5 py-3 text-sm md:text-lg rounded-xl transition-transform hover:scale-105 hover:z-10 duration-300 cursor-pointer block text-center"
