@@ -287,8 +287,11 @@ const CreativeWriting = () => {
                       </div>
 
                       <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
-                        <span className="text-[11px] text-slate-400 font-medium">
-                          Craft: {story.focus}
+                        <span className="text-[11px] text-slate-400 font-medium leading-snug">
+                          <span className="block text-xs font-bold uppercase tracking-wider text-white">
+                            Craft: {story.skill}
+                          </span>
+                          {story.focus}
                         </span>
                         <a
                           href={story.link}
