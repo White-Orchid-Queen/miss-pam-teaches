@@ -608,7 +608,7 @@ const PersuasiveWriting = () => {
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto h-13 px-8 text-base shadow-sm bg-emerald-700 hover:bg-emerald-800 text-white"
+                    className="w-full sm:w-auto h-12 px-8 text-base shadow-sm bg-emerald-700 hover:bg-emerald-800 text-white"
                   >
                     Printable PDF on TPT
                   </Button>
@@ -623,7 +623,7 @@ const PersuasiveWriting = () => {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="w-full sm:w-auto h-13 px-8 text-base border-emerald-700 text-emerald-800 hover:bg-emerald-50"
+                      className="w-full sm:w-auto h-12 px-8 text-base border-emerald-700 text-emerald-800 hover:bg-emerald-50"
                     >
                       Paperback on Amazon
                     </Button>

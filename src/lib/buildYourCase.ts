@@ -10,7 +10,7 @@ export const BYC_BOOK1_TPT_URL =
  * Leave empty until the book is live on Amazon. While it is empty, the site
  * shows "Paperback coming soon on Amazon" instead of a button.
  */
-export const BYC_BOOK1_AMAZON_URL = "";
+export const BYC_BOOK1_AMAZON_URL = "https://www.amazon.com/dp/B0HRNNFSMF";
 
 /** From Opinions to Arguments: the 3-week starter workbook (Amazon paperback). */
 export const FOTA_AMAZON_URL = "https://www.amazon.com/dp/B0HRL29KZM";
