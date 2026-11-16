@@ -5,6 +5,7 @@ import { BYC_BOOK1_TPT_URL, FOTA_TPT_URL } from "@/lib/buildYourCase";
 import {
   ADVENT_AMAZON_URL,
   ADVENT_TPT_URL,
+  ROMANS_TPT_URL,
   CURSIVE_AMAZON_URL,
   CURSIVE_TPT_URL,
 } from "@/lib/products";
@@ -216,6 +217,14 @@ const Shop = () => {
                       className="w-full max-w-sm shadow-sm shadow-slate-200 border-2 border-white bg-amber-50 text-amber-800 font-semibold px-5 py-3 text-sm md:text-lg rounded-xl transition-transform hover:scale-105 hover:z-10 duration-300 cursor-pointer block text-center"
                     >
                       Christmas Advent Handwriting &amp; Coloring Book (Amazon Paperback)
+                    </a>
+                    <a
+                      href={ROMANS_TPT_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full max-w-sm shadow-sm shadow-slate-200 border-2 border-white bg-amber-50 text-amber-800 font-semibold px-5 py-3 text-sm md:text-lg rounded-xl transition-transform hover:scale-105 hover:z-10 duration-300 cursor-pointer block text-center"
+                    >
+                      Be Ye Transformed: Romans 12 &amp; 13 Handwriting &amp; Coloring Book (Printable PDF)
                     </a>
                   </div>
                 </div>
