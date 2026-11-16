@@ -154,6 +154,14 @@ const Shop = () => {
                       Fellowship of the Ring Chapter 2 Guide
                     </a>
                     <a
+                      href="https://www.teacherspayteachers.com/Product/Fellowship-of-the-Ring-Chapters-12-Study-Guide-Bundle-Novel-Study-18376377"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full max-w-sm shadow-sm shadow-slate-200 border-2 border-white bg-indigo-50 text-indigo-700 font-semibold px-5 py-3 text-sm md:text-lg rounded-xl transition-transform hover:scale-105 hover:z-10 duration-300 cursor-pointer block text-center"
+                    >
+                      Fellowship of the Ring Chapters 1–2 Bundle (Save $2)
+                    </a>
+                    <a
                       href="https://www.teacherspayteachers.com/Product/Moby-Dick-Chapters-13-15-Reading-Guide-Vocabulary-Coloring-Page-Comprehend-17601403"
                       target="_blank"
                       rel="noopener noreferrer"
