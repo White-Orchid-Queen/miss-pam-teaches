@@ -166,7 +166,7 @@ const CreativeWriting = () => {
                     </p>
                   </div>
                   <a
-                    href="https://www.teacherspayteachers.com/My-Products/category:1647875"
+                    href="https://www.teacherspayteachers.com/store/miss-pam-teaches/category-creative-writing-futuristic-stories-1647875"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -362,7 +362,7 @@ const CreativeWriting = () => {
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-3">
                     <a
-                      href="https://www.teacherspayteachers.com/My-Products/category:1647875"
+                      href="https://www.teacherspayteachers.com/store/miss-pam-teaches/category-creative-writing-futuristic-stories-1647875"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
