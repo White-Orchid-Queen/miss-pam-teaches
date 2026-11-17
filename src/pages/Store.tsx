@@ -167,8 +167,12 @@ const ProductCard = ({ product }: { product: Product }) => {
               className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-amber-400 bg-amber-50 text-amber-900 font-semibold px-4 py-2.5 text-sm hover:bg-amber-100 transition-colors"
             >
               Paperback on Amazon
+              {product.amazonPrice && ` · ${product.amazonPrice}`}
               <ExternalLink className="w-4 h-4" aria-hidden="true" />
             </a>
+          )}
+          {product.amazonUrl && product.amazonNote && (
+            <p className="text-xs text-center text-slate-500">{product.amazonNote}</p>
           )}
         </div>
       </div>
