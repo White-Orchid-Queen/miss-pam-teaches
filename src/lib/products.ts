@@ -14,3 +14,7 @@ export const ADVENT_TPT_URL =
 
 /** O Come, Let Us Adore Him: Amazon paperback. */
 export const ADVENT_AMAZON_URL = "https://www.amazon.com/dp/B0HRSYJDT7";
+
+/** Be Ye Transformed: Romans 12 & 13 handwriting & coloring book, printable PDF on TPT. */
+export const ROMANS_TPT_URL =
+  "https://www.teacherspayteachers.com/Product/Be-Ye-Transformed-A-Handwriting-Coloring-Book-for-Teens-and-Adults-18376942";

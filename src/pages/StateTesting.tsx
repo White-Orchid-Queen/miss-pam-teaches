@@ -33,7 +33,7 @@ const StateTesting = () => {
                   Book a Consultation
                 </Button>
               </Link>
-              <Link to="/shop">
+              <Link to="/store">
                 <Button
                   size="lg"
                   variant="outline"
