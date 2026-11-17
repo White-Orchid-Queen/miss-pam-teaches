@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { track } from "@vercel/analytics";
 import { BookOpen, CheckCircle2, Clock, ExternalLink, FileText, ShoppingBag } from "lucide-react";
 import { Navbar, Footer } from "@/components/landing/LandingComponents";
 import { Button } from "@/components/ui/button";
+import { BrandShowcase } from "@/components/BrandShowcase";
 import { useSEO } from "@/hooks/use-seo";
 import {
   AMAZON_STORE_URL,
@@ -207,6 +208,14 @@ const Store = () => {
   );
   useCatalogueSchema();
 
+  // Links like /store#novels (from the banner) jump to that section.
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (!hash) return;
+    const el = document.getElementById(decodeURIComponent(hash.slice(1)));
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [hash]);
+
   const amazonCount = PRODUCTS.filter((p) => p.amazonUrl).length;
 
   return (
@@ -257,6 +266,8 @@ const Store = () => {
             )}
           </div>
         </header>
+
+        <BrandShowcase />
 
         {/* Jump-to-section bar */}
         <nav
