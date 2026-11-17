@@ -12,6 +12,7 @@ import {
   Footer,
 } from "@/components/landing/LandingComponents";
 import { useSEO } from "@/hooks/use-seo";
+import { BrandShowcase } from "@/components/BrandShowcase";
 
 const Index = () => {
   useSEO(
@@ -27,6 +28,7 @@ const Index = () => {
         <Section3 />
         <Section4 />
         <SuccessStories />
+        <BrandShowcase />
         <Section5 />
         <Section6 />
         <Specialties />
