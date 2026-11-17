@@ -58,6 +58,10 @@ export interface Product {
   details?: string[];
   tptUrl: string;
   amazonUrl?: string;
+  /** Amazon paperback price, shown on the Amazon button, e.g. "$17.99". */
+  amazonPrice?: string;
+  /** Other Amazon editions, shown under the Amazon button. */
+  amazonNote?: string;
   badge?: string;
 }
 
@@ -115,6 +119,7 @@ export const PRODUCTS: Product[] = [
     details: ["25 daily verses from Luke 2", "Cursive tracing + copywork", "Vintage coloring pages"],
     tptUrl: ADVENT_TPT_URL,
     amazonUrl: ADVENT_AMAZON_URL,
+    amazonPrice: "$9.99",
   },
   {
     id: "18369580",
@@ -129,6 +134,7 @@ export const PRODUCTS: Product[] = [
     details: ["Letters, numbers, then 30 vocabulary units", "Trace it, write it, learn it"],
     tptUrl: CURSIVE_TPT_URL,
     amazonUrl: CURSIVE_AMAZON_URL,
+    amazonPrice: "$17.99",
   },
   {
     id: "18376942",
@@ -158,6 +164,8 @@ export const PRODUCTS: Product[] = [
     details: ["8 weeks", "Claim, evidence, counterclaim & response", "Parent & Teacher Guide"],
     tptUrl: BYC_BOOK1_TPT_URL,
     amazonUrl: BYC_BOOK1_AMAZON_URL,
+    amazonPrice: "$19.79",
+    amazonNote: "Also on Kindle ($11.99) and in hardcover ($29.99)",
   },
   {
     id: "18249113",
@@ -173,6 +181,8 @@ export const PRODUCTS: Product[] = [
     details: ["3 lessons, 30–45 minutes each", "Claim, reason & explanation"],
     tptUrl: FOTA_TPT_URL,
     amazonUrl: FOTA_AMAZON_URL,
+    amazonPrice: "$9.99",
+    amazonNote: "Also on Kindle ($5.99)",
   },
 
   // ── Creative writing ──────────────────────────────────────────────────
