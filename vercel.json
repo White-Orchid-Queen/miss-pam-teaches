@@ -1,3 +1,4 @@
 {
+  "redirects": [{ "source": "/shop", "destination": "/store", "permanent": true }],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

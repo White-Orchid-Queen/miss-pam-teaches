@@ -332,7 +332,7 @@ const EnglishWritingPrograms = () => {
                 </Button>
               </Link>
               <Link
-                to="/shop"
+                to="/store"
                 className="text-base font-medium text-slate-300 hover:text-white underline underline-offset-4 transition-colors"
               >
                 Explore Independent Writing Resources

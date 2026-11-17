@@ -2,14 +2,14 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Curriculum from "./pages/Curriculum";
 import Tutoring from "./pages/Tutoring";
 import Coaching from "./pages/Coaching";
-import Shop from "./pages/Shop";
+import Store from "./pages/Store";
 import BookConsultation from "./pages/BookConsultation";
 import PersuasiveWriting from "./pages/PersuasiveWriting";
 import CreativeWriting from "./pages/CreativeWriting";
@@ -33,7 +33,8 @@ const App = () => (
           <Route path="/curriculum" element={<Curriculum />} />
           <Route path="/tutoring" element={<Tutoring />} />
           <Route path="/coaching" element={<Coaching />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/shop" element={<Navigate to="/store" replace />} />
           <Route path="/persuasive-writing" element={<PersuasiveWriting />} />
           <Route path="/creative-writing" element={<CreativeWriting />} />
           <Route path="/state-testing" element={<StateTesting />} />

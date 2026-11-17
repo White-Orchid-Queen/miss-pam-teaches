@@ -14,7 +14,7 @@ const navLinks = [
   { to: "/math-tutoring", label: "Math Tutoring" },
   { to: "/english-writing-programs", label: "English & Writing" },
   { to: "/sat-prep", label: "SAT Prep" },
-  { to: "/shop", label: "Shop" },
+  { to: "/store", label: "Store" },
 ];
 
 export const Navbar = () => {
