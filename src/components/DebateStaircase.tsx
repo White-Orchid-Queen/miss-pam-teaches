@@ -262,12 +262,12 @@ export default function DebateStaircase() {
         {book.live && (
           <ul className="text-sm text-foreground/80 space-y-2 mb-4">
             <li>
-              <span className="font-bold text-primary">TPT printable PDF:</span> colorful graphics with
-              lightly highlighted writing areas. 18 pages, $3.50.
+              <span className="font-bold text-primary">TPT printable PDF:</span> colorful students and graphics
+              with lightly highlighted writing areas, for digital use or color printing. 18 pages, $3.50.
             </li>
             <li>
               <span className="font-bold text-primary">Amazon paperback:</span> 8.5 × 11 in black and white,
-              with speech bubbles from four different students in every lesson. 26 pages, $9.99. Also on Kindle.
+              with the same four students, drawn in black and white, in every lesson. 26 pages, $9.99. Also on Kindle.
             </li>
           </ul>
         )}

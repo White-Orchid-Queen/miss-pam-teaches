@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/use-seo";
 import { BubblesMark, BuildACaseLogo, SeriesLogo } from "@/components/BuildACaseLogo";
 import DebateStaircase from "@/components/DebateStaircase";
+import LessonOneTry from "@/components/LessonOneTry";
 import {
   BYC_BOOK1_AMAZON_URL,
   BYC_BOOK1_TPT_URL,
@@ -341,13 +342,17 @@ const Debate = () => {
                   </a>
                 </div>
                 <p className="text-sm text-muted-foreground mt-3">
-                  Printable PDF: 18 color pages, $3.50, rubric included •
-                  Paperback: 26 black-and-white pages with speech bubbles from
-                  four students in every lesson, $9.99
+                  Printable PDF: 18 color pages for digital use or color
+                  printing, $3.50, rubric included • Paperback: 26
+                  black-and-white pages, 8.5 × 11, $9.99
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
                   Ready for more? Continue with Argument Builder below.
                 </p>
+              </div>
+
+              <div className="mt-12">
+                <LessonOneTry />
               </div>
 
               <div className="mt-12 pt-10 border-t border-sky-100">
