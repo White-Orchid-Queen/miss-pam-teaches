@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/use-seo";
 import { BubblesMark, BuildACaseLogo, SeriesLogo } from "@/components/BuildACaseLogo";
+import DebateStaircase from "@/components/DebateStaircase";
+import LessonOneTry from "@/components/LessonOneTry";
 import {
   BYC_BOOK1_AMAZON_URL,
   BYC_BOOK1_TPT_URL,
@@ -340,12 +342,35 @@ const Debate = () => {
                   </a>
                 </div>
                 <p className="text-sm text-muted-foreground mt-3">
-                  Printable PDF: 18 pages, $3.50, rubric included • Paperback: 26
-                  pages, $9.99
+                  Printable PDF: 18 color pages for digital use or color
+                  printing, $3.50, rubric included • Paperback: 26
+                  black-and-white pages, 8.5 × 11, $9.99
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
                   Ready for more? Continue with Argument Builder below.
                 </p>
+              </div>
+
+              <div className="mt-12">
+                <LessonOneTry />
+              </div>
+
+              <div className="mt-12 pt-10 border-t border-sky-100">
+                <div className="text-center max-w-3xl mx-auto mb-6">
+                  <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-sky-700 mb-2">
+                    The full series
+                  </p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-3">
+                    Debate and Persuasion Series: 3 Mini Lessons Per Book
+                  </h3>
+                  <p className="text-foreground/80 leading-relaxed">
+                    From Opinions to Arguments is Book 1 of 10. Each book teaches
+                    one skill and builds on the one before it, from a plain
+                    opinion all the way to a timed debate speech. Book 1 is on
+                    TPT and Amazon now. Books 2–10 are being built.
+                  </p>
+                </div>
+                <DebateStaircase />
               </div>
             </div>
           </section>
